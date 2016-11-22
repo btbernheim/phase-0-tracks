@@ -1,7 +1,5 @@
 # Git Definitions
 
-Here's an edit
-
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control? Version control is a method that allows us to view the entire history of revisions made to one or more files and fascilitates the merging of revisions made by other collaborators. It is essentially the management of changes made to a source code.
@@ -13,3 +11,5 @@ Why is it useful? It allows programers to work in collaboration on the same prog
 * What is a commit? What makes a good commit message? A commit is a save point made for a project to a repository that makes temporary chnages perminent. The commit message is a detailed statement describing what changes were made since the last commit.
 
 * What is a merge conflict? A type of conflict that occurs when git does not know how to interpret the merger of two branches where the same region of each branch has been modified. Git doesn't know which change to keep, so a human must intervene.
+
+Added an edit
