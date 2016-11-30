@@ -16,9 +16,9 @@ ul.job-description {
 }
 
 /*1) Cascadia means that styles can fall from one style sheet to another, 
-enabling multiple styling sheets to be used on one HTML document
-The browser decides which to use b whichever declaration has the most weight.
-Documents loaded into browsers and declarations are sorted/given wieght.
+enabling multiple styling sheets to be used on one HTML document.
+The browser decides which to use by whichever declaration has the most weight.
+Documents loaded into browsers and declarations are sorted and given wieght.
 2)Psuedoselector's are a type of class (pseudo-class) used to define a special
 state of an element. ex) style visited and unvisted links differently.
 */
