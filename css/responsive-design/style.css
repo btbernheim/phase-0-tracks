@@ -49,12 +49,6 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-  body {
-    background-color: hotpink;
-  }
-}
-
-@media screen and (max-width: 500px) {
   section#external-links {
     display: block;
     margin: auto;
@@ -70,7 +64,15 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-  body {
-    background-color: hotpink;
+  main>h1 {
+    font-size: 100%;
+    text-align: center;
+  }
+  main {
+    width: 100%;
   }
 }
+
+
+
+
