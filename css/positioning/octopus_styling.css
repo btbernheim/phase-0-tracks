@@ -4,3 +4,9 @@ img#octocenter {
 	margin-top: 100px;
 }
 
+img#cowboyhat {
+	position: absolute; 
+	top: 10px; 
+	left: 470px; 
+	z-index: 1
+}
