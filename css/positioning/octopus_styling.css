@@ -10,7 +10,6 @@ img#cowboyhat {
 	position: relative; 
 	bottom: 370px; 
 	left: 10px; 
-	z-index: 1
 }
 
 img#heartglasses {
@@ -19,5 +18,4 @@ img#heartglasses {
 	position: relative; 
 	bottom: 355px; 
 	left: 5px; 
-	z-index: 2
 }
