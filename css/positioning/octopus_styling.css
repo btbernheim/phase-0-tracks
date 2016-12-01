@@ -5,15 +5,19 @@ img#octocenter {
 }
 
 img#cowboyhat {
-	position: absolute; 
-	top: 10px; 
-	left: 470px; 
+	margin: auto;
+	display: block;
+	position: relative; 
+	bottom: 370px; 
+	left: 10px; 
 	z-index: 1
 }
 
 img#heartglasses {
-	position: absolute; 
-	top: 200px; 
-	left: 540px; 
+	margin: auto;
+	display: block;
+	position: relative; 
+	bottom: 355px; 
+	left: 5px; 
 	z-index: 2
 }
