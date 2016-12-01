@@ -10,3 +10,10 @@ img#cowboyhat {
 	left: 470px; 
 	z-index: 1
 }
+
+img#heartglasses {
+	position: absolute; 
+	top: 200px; 
+	left: 540px; 
+	z-index: 2
+}
