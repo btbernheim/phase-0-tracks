@@ -1,0 +1,24 @@
+/*Both octopus_styling and fixed_position_method.css accomplish
+the same thing, except octopus_styling.css keeps its structure when the
+browsers window gets bigger or smaller.*/
+
+
+img#octocenter {
+	display: block;
+    margin: auto;
+	margin-top: 100px;
+}
+
+img#cowboyhat {
+	position: absolute; 
+	top: 10px; 
+	left: 470px; 
+	z-index: 1
+}
+
+img#heartglasses {
+	position: absolute; 
+	top: 200px; 
+	left: 540px; 
+	z-index: 2
+}
