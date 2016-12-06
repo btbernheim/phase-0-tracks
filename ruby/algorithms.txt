@@ -1,0 +1,60 @@
+Release 0: Equip Your New Robot:
+
+-Stand in front of the elevator
+	-If a set of up and down arrow buttons are present to call the elevator
+		-Push the up arrow to get to a higher floor or down arrow for a lower floor
+	-Else push the button to call the elevator
+-Wait for the elevator doors to open.
+	-If no one is in the elevator
+		-Enter the elevator
+	-If there are people in the elevator
+		-Wait for them to come out
+		-If they stop exiting or no one is left
+				-Enter the elevator
+-Select the button numerically matching your destinations floor
+-Wait for the doors to close
+	-If someone is running towards the elevator or asks you to hold it
+		-Obstruct the closing doors so they open again
+		-Stop obstructing
+-Once everyone is in the elevator
+	-Remain still until you have reached your floor
+-Once your floor is reached
+	-Wait for the doors to open
+	-Allow anyone in front of you to exit first
+	-Exit the elevator
+
+Release 1: Find a Real-Life Algorithm:
+
+“Morning Hygiene Routine”-
+-Enter the bathroom
+	-If girlfriend is in the bathroom and you can not enter
+		-Tell her to hurry up and wait for her to leave
+	-Once she has left
+		-Enter the bathroom 
+-Turn on the shower by turning the knob up
+-To adjust the water temperature
+	-Turn the knob down to make it hotter
+	-Else turn the knob up to make it colder
+-Once the water temperature is satisfactory
+	-Enter the shower
+-Shampoo hair
+	-Rinse hair
+-Condition hair
+	-Rinse hair
+-Wash face
+-Wash body
+-Brush teeth
+-Turn off shower by turning the knob all the way down
+-Dry off with a towel
+-Hang towel to dry
+-If leaving the house soon after the shower
+	-Comb and style hair
+	-Else comb hair
+-Exit bathroom
+
+
+
+
+
+
+		
