@@ -1,3 +1,4 @@
+#Build encryption program
 def encrypt(str)
   index = 0
   while index < str.length
@@ -14,12 +15,7 @@ end
 encrypt("abc")
 encrypt("zed") 
 
-
-
-
-# A decrypt method that reverses the process above. Note that Ruby doesn't have a built-in method for going backward one letter. How can you find out where a letter is in the alphabet, then access the letter right before it? Hint: In the IRB session above, you learned how to ask a string for the index of a letter."abcdefghijklmnopqrstuvwxyz" counts as a string.
-
-
+#Build decryption program
 def decrypt(str2)
   alpha = "abcdefghijklmnopqrstuvwxyz"
   alpha = alpha.reverse!
@@ -45,6 +41,7 @@ decrypt("afe")
 
 decrypt(encrypt("swordfish"))
 
+#Take input from user to run encryption or decryption program
 answer = ""
 until answer == "encrypt" or answer == "decrypt"
   puts "Would you like to encrypt or decrypt a password (enter 'encrypt' or 'decrypt)?"
