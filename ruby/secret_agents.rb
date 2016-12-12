@@ -1,20 +1,18 @@
-
-# advance each letter by one letter in the index using .next
-# exclude 0
-
 def encrypt(str)
   index = 0
   while index < str.length
     if str[index] == "z"
-      puts "a"
+      str[index] = "a"
     else
-      puts str[index].next
+      str[index] = str[index].next
     end
     index += 1
   end
+  p str
 end
 
 encrypt("abc")
+encrypt("zed") 
 
 
 
@@ -22,15 +20,48 @@ encrypt("abc")
 # A decrypt method that reverses the process above. Note that Ruby doesn't have a built-in method for going backward one letter. How can you find out where a letter is in the alphabet, then access the letter right before it? Hint: In the IRB session above, you learned how to ask a string for the index of a letter."abcdefghijklmnopqrstuvwxyz" counts as a string.
 
 
-def decrypt(str)
+def decrypt(str2)
   alpha = "abcdefghijklmnopqrstuvwxyz"
-  index = 0
-  while index < str.length
-      if str[]
+  alpha = alpha.reverse!
+  index2 = 0
+  alpha_index = 0
+  while index2 < str2.length
+    alpha_index = 0
+    while str2[index2] != alpha[alpha_index]
+      alpha_index += 1
+    end
+
+    if alpha[alpha_index] == "a"
+      str2[index2] = "z"
+    else str2[index2] = alpha[alpha_index + 1]
+    end
+    index2 += 1
   end
-    index += 1
+  p str2
 end
 
-decrypt("bcd")
+decrypt("bcd") 
+decrypt("afe") 
 
-if str[index]
+decrypt(encrypt("swordfish"))
+
+answer = ""
+until answer == "encrypt" or answer == "decrypt"
+  puts "Would you like to encrypt or decrypt a password (enter 'encrypt' or 'decrypt)?"
+  answer = gets.chomp
+end
+
+puts "What password would you like encrypted or decrypted?"
+  password = gets.chomp
+
+if answer == "encrypt"
+  str = password
+  encrypt(str)
+  else answer == "decrypt"
+    str2 = password
+    decrypt(str2)
+end
+
+exit
+
+
