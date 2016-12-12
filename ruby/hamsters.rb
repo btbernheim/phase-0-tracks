@@ -24,7 +24,7 @@ if age == ""
 	age = nil
 end
 
-#Print all values with labels
+#Print all values with labelsComo
 puts "Hamster name #{hamster_name}"
 puts "Hamster volume level #{volume}"
 puts "Hamster fur color #{color}"
