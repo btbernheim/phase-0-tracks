@@ -15,7 +15,7 @@ until vampire == employee
     		else name2 = true
     	end
   
-    puts "How old are you? What year were you born?"
+  puts "How old are you? What year were you born?"
 	age = gets.to_i
 	birth_year = gets.to_i
   		if birth_year + age == 2016
@@ -39,16 +39,16 @@ until vampire == employee
        			insurance2 = false
        	end
       	
-    puts "List any allergies you might have (Enter 'done' when finsihed):"
-    allergies = gets.chomp
-	    until allergies.include? "sunlight" or allergies.include? "done"
-	      allergies = gets.chomp
+  puts "List any allergies you might have (Enter 'done' when finsihed):"
+  allergies = gets.chomp
+    until allergies.include? "sunlight" or allergies.include? "done"
+      allergies = gets.chomp
 	    end
-	    if allergies.include? "sunlight"
-	    	allergies2 = true
+    if allergies.include? "sunlight"
+	    allergies2 = true
 			else
-		      allergies2 = false
-	    end
+		    allergies2 = false
+      end
   
 	if !name2
     	puts "Definitely a vampire."
