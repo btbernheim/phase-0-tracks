@@ -37,7 +37,7 @@
 "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+"z".each_codepoint {|z| print z, ' ' }
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
