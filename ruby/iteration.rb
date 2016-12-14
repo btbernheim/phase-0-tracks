@@ -48,6 +48,7 @@ def delete_hash
   names = {bob: "miller", ben: "smith", billy: "anderson"}
   puts "Before hash value deleting: #{names}"
   names.delete_if { |name| name.length < 4 }
+                    #####Is it ok that I'm not using the key pair for the parameters, just the key?
   yield(names)
 end
 
@@ -100,17 +101,22 @@ filter_hash2 {|valfilt| puts "After filtering: #{valfilt}"}
 #4) Create a method that will remove items from a data structure until the condition in the block evaluates to false
 #Use .drop_while
 #Array method
-def remove
-  values=[1,2,4,5,6,7,8]
-  names={bob:"miller", ben:"smith", billy:"anderson", bill:"nye"}
-  puts "Before array element deleting: #{values}"
-  puts "Before hash element deleting: #{names}"
-  
-  numbers=values.drop_while {|num| num < 6}
+def remove_false_array
+  values = [1, 2, 4, 5, 6, 7, 8]
+  puts "Before array deleting: #{values}"
+  numbers = values.drop_while { |num| num < 6 }
+      #####Why do I need to include the numbers variable for this method, but not the other three?
   yield(numbers)
-  
-  hash=names.drop_while {|k,v| k.length<4}
-  yield(hash)
 end
 
-remove {|val| puts "After filtering: #{val}"}
+remove_false_array {|remval| puts "After array deleting: #{remval}"}
+
+#Hash method
+def remove_false_hash
+  names = { bob:"miller", ben:"smith", billy:"anderson", bill:"nye" }
+  puts "Before array deleting: #{names}"
+  newnames = names.drop_while { |fname, lname| fname.length < 4 }
+  yield(newnames)
+end
+
+remove_false_hash {|remval| puts "After array deleting: #{remval}"}
