@@ -79,29 +79,27 @@ filter_hash {|valfilt| puts "After filtering: #{valfilt}"}
 #3) Create a different method that filters a data structure only for items satisfying a certain condition  
 #Use .each_with_index for array / Use .keep_if for hash
 #Array method
-def filter2
-  values=[1,3,4,5,6,7,8]
-  names={bob:"miller", ben:"smith", billy:"anderson"}
-  puts "Before array element deleting: #{values}"
-  puts "Before hash element deleting: #{names}"
-  
-  emptyarr=[]
-  values.each_with_index do |num| 
-    if num.odd?  
-      emptyarr << num
-    end
-  end
-  yield(emptyarr)
-  
-  hash=names.keep_if do |name| 
-    name.length>4    
-  end
-  yield(hash)
+def filter_array2
+  values = [8, 3, 1, 5, 4, 9, 8]
+  puts "Before array filtering: #{values}"
+  values.keep_if { |num| num.odd? }
+  yield(values)
 end
 
-filter2 {|val| puts "After filtering: #{val}"}
+filter_array2 {|valfilt| puts "After filtering: #{valfilt}"}
 
-#method that will remove items from a data structure until the condition in the block evaluates to false
+def filter_hash2
+  names = {bob:"miller", ben:"smith", billy:"anderson"}
+  puts "Before hash element deleting: #{names}"
+  names.keep_if { |num| num.length > 4 } 
+  yield(names)
+end
+
+filter_hash2 {|valfilt| puts "After filtering: #{valfilt}"}
+
+#4) Create a method that will remove items from a data structure until the condition in the block evaluates to false
+#Use .drop_while
+#Array method
 def remove
   values=[1,2,4,5,6,7,8]
   names={bob:"miller", ben:"smith", billy:"anderson", bill:"nye"}
