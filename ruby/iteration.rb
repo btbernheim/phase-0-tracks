@@ -31,7 +31,9 @@ end
 
 #RELEASE 2:
 
-#Create a method that iterates through items, deleting any that meet a certain condition for an array
+#1.) Create a method that iterates through items, deleting any that meet a certain condition for an array
+#Use .delete_if method
+#Array method
 def delete_array
   values=[1, 3, 4, 5, 6, 7, 8]
   puts "Before array value deleting: #{values}"
@@ -41,7 +43,7 @@ end
 
 delete_array { |valdel| puts "After array value deleting: #{valdel}"}
 
-
+#Hash method
 def delete_hash
   names = {bob: "miller", ben: "smith", billy: "anderson"}
   puts "Before hash value deleting: #{names}"
@@ -52,21 +54,31 @@ end
 delete_hash { |namedel| puts "After hash value deleting: #{namedel}"}
 
 
-#method that filters a data structure for only items that do satisfy a certain condition
-def filter1
-  values=[1,3,4,5,6,7,8]
-  names={bob:"miller", ben:"smith", billy:"anderson"}
-  puts "Before array element deleting: #{values}"
-  puts "Before hash element deleting: #{names}"
-  arr=values.select {|num| num<5}
-  yield(arr)
-  hash=names.select {|name| name.length<5}
-  yield(hash)
+#2.) Create a method that filters a data structure only for items that satisfy a certain condition.
+#Use .select method
+#Array method
+def filter_array
+  values = [8, 3, 1, 5, 4, 9, 8]
+  puts "Before array filtering: #{values}"
+  values.select! { |num| num < 5 }
+  yield(values)
 end
 
-filter1 {|val| puts "After filtering: #{val}"}
+filter_array { |valfilt| puts "After filtering: #{valfilt}"}
 
-#different method that filters a data structure for only items satisfying a certain condition  
+#Hash method
+def filter_hash
+  names = {bob:"miller", ben:"smith", billy:"anderson"}
+  puts "Before hash filtering: #{names}"
+  names.select! { |name| name.length < 5 }
+  yield(names)
+end
+
+filter_hash {|valfilt| puts "After filtering: #{valfilt}"}
+
+#3) Create a different method that filters a data structure only for items satisfying a certain condition  
+#Use .each_with_index for array / Use .keep_if for hash
+#Array method
 def filter2
   values=[1,3,4,5,6,7,8]
   names={bob:"miller", ben:"smith", billy:"anderson"}
