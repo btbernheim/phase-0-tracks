@@ -43,14 +43,14 @@ client_details = {
 }
 
 #Add and convert data into a key pair for the client_details hash.
-client_details[:namekey] = name1
-client_details[:agekey] = age
-client_details[:childrenkey] = children
-client_details[:decorkey] = decor
-client_details[:colorkey] = colors
-client_details[:homekey] = home
-client_details[:petskey] = pets
-client_details[:bedroomkey] = bedrooms
+client_details[:name] = name1
+client_details[:age] = age
+client_details[:children] = children
+client_details[:decor] = decor
+client_details[:color] = colors
+client_details[:home] = home
+client_details[:pets] = pets
+client_details[:bedroom] = bedrooms
 
 #Print the hash once all data has been gathered.
 p client_details
@@ -62,7 +62,7 @@ if answer == "yes"
 	puts "Which section would you like to alter?"
 	section = gets.chomp.to_sym
 	puts "Enter your new data:"
-	new_data = gets.chomp.to_sym
+	new_data = gets.chomp
 	client_details[section] = new_data
 	p client_details
 	else answer == "none"
