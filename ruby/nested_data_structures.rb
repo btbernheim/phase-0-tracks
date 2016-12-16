@@ -4,23 +4,22 @@
 
 hotel = {
 	first_floor: {
-		number_of_rooms: 10,
-		type_of_rooms: {
+		room_quantity: 10,
+		room_type: {
 			terrace_studio: [
 				'queen bed', 
 				'tv',
-				'night stnad'
-				'alarm clock'
-				'dresser'
-				'desk'
-				'chair'
-				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'night stnad',
+				'dresser',
+				'desk',
+				'chair',
+				'bathroom'
 			]
 		}
 	},
 	second_floor: {
-		number_of_rooms: 7,
-		type_of_rooms: {
+		room_quantity: 7,
+		room_type: {
 			bungalow_1_bed: [
 				'queen bed', 
 				'tv',
@@ -29,7 +28,7 @@ hotel = {
 				'dresser',
 				'desk',
 				'chair',
-				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'bathroom'
 			],
 			bungalow_2_bed: [
 				'2 queen beds', 
@@ -39,44 +38,42 @@ hotel = {
 				'dresser',
 				'desk',
 				'chair',
-				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'bathroom'
 			]
 		}
 	},
 	third_floor: {
-		number_of_rooms: 2
-		type_of_rooms: {
+		room_quantity: 2,
+		room_type: {
 			executive_suite: [
 				'king bed', 
 				'tv',
-				'night stnad'
-				'alarm clock'
-				'dresser'
-				'desk'
-				'chair'
-				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'night stnad',
+				'alarm clock',
+				'dresser',
+				'desk',
+				'chair',
+				'bathroom',
 				'mini fridge',
 				'sink',
 				'balcony',
 				'sofa',
 				'coffe table'
-
-
 			],
 			penthouse: [
 				'king bed', 
 				'tv',
-				'night stnad'
-				'alarm clock'
-				'dresser'
-				'desk'
-				'chair'
-				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'night stnad',
+				'alarm clock',
+				'dresser',
+				'desk',
+				'chair',
+				'bathroom',
 				'mini fridge',
 				'sink',
 				'balcony',
 				'sofa',
-				'coffe table'
+				'coffe table',
 				'hot tub'
 			]
 		}
