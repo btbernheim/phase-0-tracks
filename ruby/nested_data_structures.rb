@@ -2,7 +2,7 @@
 
 #Create the apartment complex using a hotel:
 
-apartment_complex = {
+hotel = {
 	first_floor: {
 		number_of_rooms: 10,
 		type_of_rooms: {
@@ -14,45 +14,71 @@ apartment_complex = {
 				'dresser'
 				'desk'
 				'chair'
-				bathroom: ["toilet", "mirror", "shower", "sink",]
+				bathroom: ["toilet", "mirror", "shower", "sink"]
 			]
-
 		}
-	}
-
+	},
 	second_floor: {
 		number_of_rooms: 7,
 		type_of_rooms: {
 			bungalow_1_bed: [
-					'queen bed', 
-					'tv',
-					'night stnad',
-					'alarm clock',
-					'dresser',
-					'desk',
-					'chair',
-					bathroom: ["toilet", "mirror", "shower", "sink",]
+				'queen bed', 
+				'tv',
+				'night stnad',
+				'alarm clock',
+				'dresser',
+				'desk',
+				'chair',
+				bathroom: ["toilet", "mirror", "shower", "sink"]
+			],
+			bungalow_2_bed: [
+				'2 queen beds', 
+				'tv',
+				'night stnad',
+				'alarm clock',
+				'dresser',
+				'desk',
+				'chair',
+				bathroom: ["toilet", "mirror", "shower", "sink"]
 			]
-				bungalow_2_bed: [
-					'2 queen beds', 
-					'tv',
-					'night stnad',
-					'alarm clock',
-					'dresser',
-					'desk',
-					'chair',
-					bathroom: ["toilet", "mirror", "shower", "sink",]
+		}
+	},
+	third_floor: {
+		number_of_rooms: 2
+		type_of_rooms: {
+			executive_suite: [
+				'king bed', 
+				'tv',
+				'night stnad'
+				'alarm clock'
+				'dresser'
+				'desk'
+				'chair'
+				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'mini fridge',
+				'sink',
+				'balcony',
+				'sofa',
+				'coffe table'
+
+
+			],
+			penthouse: [
+				'king bed', 
+				'tv',
+				'night stnad'
+				'alarm clock'
+				'dresser'
+				'desk'
+				'chair'
+				bathroom: ["toilet", "mirror", "shower", "sink"]
+				'mini fridge',
+				'sink',
+				'balcony',
+				'sofa',
+				'coffe table'
+				'hot tub'
 			]
 		}
 	}
-
-	
-	fourth_floor: = third_floor:
-	
-	penthouse_suites: {
-		number_of_rooms: 2
-
-	}
-
-
 }
