@@ -79,3 +79,14 @@ hotel = {
 		}
 	}
 }
+
+puts hotel[:first_floor][:room_quantity]
+puts hotel[:first_floor][:room_type][:terrace_studio][0]
+puts hotel[:second_floor][:room_quantity]
+puts hotel[:second_floor][:room_type][:bungalow_1_bed][0]
+puts hotel[:second_floor][:room_type][:bungalow_2_bed][0]
+puts hotel[:third_floor][:room_quantity]
+puts hotel[:third_floor][:room_type][:executive_suite][8]
+puts hotel[:third_floor][:room_type][:penthouse][13]
+hotel[:first_floor][:room_type][:terrace_studio].push("mini fridge")
+puts hotel[:first_floor][:room_type][:terrace_studio][7]
