@@ -3,6 +3,7 @@
 #Look to check if the value is the same the given value.
 #Return the index of the item if it exists within the array.
 #Return nil if it's not in the array.
+#for each index, find the value of that index and comapre it to the parameter
 array = [1, 2, 3, 4, 5]
 int = 7
 def int_search(array, int)
@@ -19,10 +20,6 @@ def int_search(array, int)
 end
 
 int_search(array, int)
-		#for each index, find the value of that index and comapre it to the parameter
-
-
-
 
 #Release 1
 #Create a method that will recieve the number of the Fibonacci sequence.
@@ -33,6 +30,25 @@ int_search(array, int)
 #Create another array containg all the values.
 #Repeat line 10-12 relative to the value recieved at line 8.
 #Return the array at line 13
+puts "Enter an integer:"
+fib_int = gets.to_i
+
+def fibonacci(fib_int)
+	array = [0, 1]
+	fib_array = [0, 1]
+	i = 0
+	until i == fib_int - 2
+		fib_array.push (array[0] + array[1])
+		array.push (array[0] + array[1])
+		array.shift
+		i += 1
+	end
+	p fib_array
+end
+
+fibonacci(fib_int)
+
+
 
 #Release 2
 #Receive an array
