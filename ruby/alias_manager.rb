@@ -1,5 +1,4 @@
 #Create a method that swaps the first and last name.
-
 #Prompt the user for some input.
 puts "What is your name?"
 str = gets.chomp
@@ -10,10 +9,19 @@ def name_swap(str)
 				#Make all letters lowercase, and turn the two names into seperate arrays.
 	name_string[0], name_string[1] = name_string[1], name_string[0]
 				#Switch the names
+	name_string.join(' ').tr("aeiou", "uaeio").tr("bcdfghjklmnpqrstvwxyz", "zbcdfghjklmnpqrstvwxy")
+        #Convert the array back to a string
 end
 
-puts name_swap(str)
-#name_swap("Brian Bernheim")
+p name_swap(str)
 
-#str.gsub(/" "/, "")
-#puts "Brian Bernheim".split(' ')
+#Create a method that switches every vowel to the next vowel in 'aeiou'
+#puts "What is your name?"
+#vow = gets.chomp
+#def vowel_change(vow)
+#	if vow.include? "a"	
+#end
+
+
+
+
