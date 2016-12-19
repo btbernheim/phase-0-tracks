@@ -58,33 +58,29 @@ fibonacci(fib_int)
 #The pass through the list is repeated until no swaps are needed, 
 #which indicates that the list is sorted. 
 #Think through bubble sort.
-#Try to loop throughout the array until num_swap == 0
+#Loop through the array until num_swap == 0
 #Compare values within an array and swap their index if one value is smaller at the compared index location.
 #Record the nummer of swaps = num_swap
 
 
-arr = [5, 20, 10, 3, 7, 5, 8]
+array = [9,6,7,2,5,3,4,1,8]
 
-def sorting(arr)
-	length = arr.length
-	loop do
-	  num_swap = false
-	  (length - 1).times do |i|
-    	if arr[i] > arr[i + 1]
-        arr[i], arr[i + 1] = arr[i + 1], arr[i]
-        num_swap = true
-      end
-  	end
+def bubble_sort(array)
+  sorted = false
+  x = array.length
+  until sorted == true
+    sorted = true
+    (x - 1).times do |i|
+	    if array[i] > array[i + 1]
+	     	array[i], array[i + 1] = array[i + 1], array[i]
+	    	sorted = false
+	    end
+    end
   end
+  p array
 end
 
-p sorting(arr)
-
-
-
-
-
-
+bubble_sort(array)
 
 
 
