@@ -36,7 +36,10 @@ until tf == true
   count += 1
 end
 
+x = 0
 
-
-
+until x == count -1
+  puts "#{name_array[x]} is actually #{code_array[x]}"
+  x+=1
+end
 
