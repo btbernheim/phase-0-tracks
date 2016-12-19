@@ -22,10 +22,10 @@ end
 name_array = []
 code_array = []
 tf = false
+count = 0
 
 #Add interface that runs the method for every inputed name
 until tf == true
-  count = 0
   puts "What is your name?"
   str = gets.chomp
   name_array << str
@@ -33,7 +33,6 @@ until tf == true
   if str == "quit"
   	 tf = true
   else str != "quit"
-  	p name_swap(str)
   	code_array << name_swap(str)
   	tf = false
   end
