@@ -1,4 +1,4 @@
-#Create a method that takes a string as a parameter
+#Create a method that takes a string as a parameter.
 #Make every letter of the inputed string lowercase.
 #Swap the first and last name.
 #Convert the name string into an array and switch the index of the names
