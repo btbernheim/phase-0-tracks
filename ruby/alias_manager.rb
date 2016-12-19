@@ -1,26 +1,41 @@
 #Create a method that swaps the first and last name.
 #Prompt the user for some input.
-puts "What is your name?"
-str = gets.chomp
 
 #Initialize a method that take the user input and swaps the first and last name.
+
+str = ""
+name_array = []
+code_array = []
+
+
 def name_swap(str)
+	#Make all letters lowercase, and turn the two names into seperate arrays.
 	name_string = str.downcase.split(' ')
-				#Make all letters lowercase, and turn the two names into seperate arrays.
+	#Switch the names
 	name_string[0], name_string[1] = name_string[1], name_string[0]
-				#Switch the names
-	name_string.join(' ').tr("aeiou", "uaeio").tr("bcdfghjklmnpqrstvwxyz", "zbcdfghjklmnpqrstvwxy")
-        #Convert the array back to a string
+	  #Capitalize both names. Convert the array back to a string, modify letters
+	name_string.map(&:capitalize).join(" ").tr("AaEeIiOoUu", "EeIiOoUuAa").tr("BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz", "CcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZzBb")
 end
 
-p name_swap(str)
+#p name_swap("Felicia Torres")
 
-#Create a method that switches every vowel to the next vowel in 'aeiou'
-#puts "What is your name?"
-#vow = gets.chomp
-#def vowel_change(vow)
-#	if vow.include? "a"	
-#end
+tf = false
+
+until tf == true
+  count = 0
+  puts "What is your name?"
+  str = gets.chomp
+  name_array << str
+  if str == "quit"
+  	 tf = true
+  else str != "quit"
+  	p name_swap(str)
+  	code_array << name_swap(str)
+  	tf = false
+  end
+  count += 1
+end
+
 
 
 
