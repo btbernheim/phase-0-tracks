@@ -85,16 +85,3 @@ def bubble_sort(array)
 end
 
 bubble_sort(array)
-
-
-
-
-
-
-
-
-
-
-
-
-#Assign a value of 1, start looping, 
