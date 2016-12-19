@@ -61,4 +61,40 @@ fibonacci(fib_int)
 #Try to loop throughout the array until num_swap == 0
 #Compare values within an array and swap their index if one value is smaller at the compared index location.
 #Record the nummer of swaps = num_swap
+
+
+arr = [5, 20, 10, 3, 7, 5, 8]
+
+def sorting(arr)
+	length = arr.length
+	loop do
+	  num_swap = false
+	  (length - 1).times do |i|
+    	if arr[i] > arr[i + 1]
+        arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        num_swap = true
+      end
+  	end
+  end
+end
+
+p sorting(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Assign a value of 1, start looping, 
