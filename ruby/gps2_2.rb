@@ -6,14 +6,16 @@
   # print the list to the console [can you use one of your other methods here?]
 # output: [what data type goes here, array or hash?]
 
-list_of_items = "soda avocado banana onion steak"
+#list_of_items = "soda avocado banana onion steak"
+list_of_items = ""
+
 
 def create_list(list_of_items)
-grocery_list = {}
-list_of_items.split(' ').each do |item|
-  grocery_list[item] = 1
-end
-return grocery_list
+	grocery_list = {}
+	list_of_items.split(' ').each do |item|
+	  grocery_list[item] = 1
+	end
+	return grocery_list
 end
 
 grocery_list = create_list(list_of_items)
@@ -27,7 +29,8 @@ def add_item(groceries_hash, item_name, quantity)
   groceries_hash[item_name] = quantity
 end
 
-add_item(grocery_list, "apple", 15)
+#add_item(grocery_list, "apple", 15)
+
 # Method to remove an item from the list
 # input:
 # steps:
@@ -37,7 +40,7 @@ def remove_item(groceries_hash, item_name)
   groceries_hash.delete(item_name)
 end
 
-remove_item(grocery_list, "soda")
+#remove_item(grocery_list, "soda")
 
 # Method to update the quantity of an item
 # input:
@@ -47,7 +50,7 @@ def update_quantity(groceries_hash, item_name, quantity)
   groceries_hash[item_name] = quantity
 end
 
-update_quantity(grocery_list, "soda", 12)
+#update_quantity(grocery_list, "soda", 12)
 
 
 # Method to print a list and make it look pretty
@@ -58,12 +61,20 @@ def print_list(groceries_hash)
 	puts "You need to buy:"
 	groceries_hash.each do |item_name, quantity|
 	    if quantity > 1
-	      puts "#{quantity} #{item_name}'s!"
+	      puts "#{quantity} #{item_name}s!"
 	      else quantity = 1
 	        puts "#{quantity} #{item_name}!"
 	    end
   end
 end
 
+create_list(list_of_items)
+add_item(grocery_list, "Lemonade", 2)
+add_item(grocery_list, "Tomatoe", 3)
+add_item(grocery_list, "Onion", 1)
+add_item(grocery_list, "Ice Cream", 4)
+remove_item(grocery_list, "Lemonade")
+update_quantity(grocery_list, "Ice Cream", 1)
 print_list(grocery_list)
+
 
