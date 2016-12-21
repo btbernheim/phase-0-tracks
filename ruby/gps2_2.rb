@@ -6,13 +6,13 @@
   # print the list to the console [can you use one of your other methods here?]
 # output: [what data type goes here, array or hash?]
 
-list_of_items = "soda avocado banana crackers bread"
+list_of_items = "soda avocado banana onion steak"
 
 def create_list(list_of_items)
 grocery_list = {}
 list_of_items.split(' ').each do |item|
   grocery_list[item] = 1
-  end
+end
 return grocery_list
 end
 
@@ -54,3 +54,15 @@ update_quantity(grocery_list, "soda", 12)
 # input:
 # steps:
 # output:
+def print_list(groceries_hash)
+  groceries_hash.each do |item_name, quantity|
+    if quantity > 1
+      puts "You need to buy #{quantity} #{item_name}'s!"
+      else quantity = 1
+        puts "You need to buy #{quantity} #{item_name}!"
+    end
+  end
+end
+
+print_list(grocery_list)
+
