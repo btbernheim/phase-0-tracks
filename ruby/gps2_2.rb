@@ -1,3 +1,4 @@
+#Release 1:
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -72,4 +73,17 @@ remove_item(grocery_list, "Lemonade")
 update_quantity(grocery_list, "Ice Cream", 1)
 print_list(grocery_list)
 
+#Release 3:
+#1)Pseudo code for a method should include a description of what something does, what is being inputed,
+#the steps needed to achieve the desired output, and what is ouptued by it. Don't include code.
+#2)Hashes allow you to pair an item with a quantity, achieving this kind of structure using arrays
+#would be a much more convoluted process. Arrays are much easier to deal with though.
+#3)A method returns whatever is evaluated at the last line of the expression.
+#4)You can pass data types (i.e. strings, integers, symbols) into a method as an argument.
+#5)You can pass information between methods by calling the desired input within the method's parameters,
+#methods can also be called within other methods
+#6)This challenge really helped my to understand the use of method parameters. I realized that
+#they are suppossed to be used like variables that will be switch out with their corresponding values
+#when the the method is called with its arguments. I'm still a bit confused as to how you might pull some
+#information out a method.
 
