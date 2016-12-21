@@ -55,12 +55,13 @@ update_quantity(grocery_list, "soda", 12)
 # steps:
 # output:
 def print_list(groceries_hash)
-  groceries_hash.each do |item_name, quantity|
-    if quantity > 1
-      puts "You need to buy #{quantity} #{item_name}'s!"
-      else quantity = 1
-        puts "You need to buy #{quantity} #{item_name}!"
-    end
+	puts "You need to buy:"
+	groceries_hash.each do |item_name, quantity|
+	    if quantity > 1
+	      puts "#{quantity} #{item_name}'s!"
+	      else quantity = 1
+	        puts "#{quantity} #{item_name}!"
+	    end
   end
 end
 
