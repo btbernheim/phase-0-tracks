@@ -24,7 +24,7 @@ grocery_list = create_list(list_of_items)
 # output:
 
 def add_item(groceries_hash, item_name, quantity)
-  hash_of_groceries[item_name] = quantity
+  groceries_hash[item_name] = quantity
 end
 
 add_item(grocery_list, "apple", 15)
@@ -43,6 +43,11 @@ remove_item(grocery_list, "soda")
 # input:
 # steps:
 # output:
+def update_quantity(groceries_hash, item_name, quantity)
+  groceries_hash[item_name] = quantity
+end
+
+update_quantity(grocery_list, "soda", 12)
 
 
 # Method to print a list and make it look pretty
