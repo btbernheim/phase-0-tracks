@@ -1,7 +1,4 @@
-#Species:
-#Canine 
-
-#Breed: 
+#Puupy Breed: 
 #Golden Retriever
 
 #Characteristics
@@ -9,7 +6,7 @@
 #Fur length: long
 #Leg count: 4
 #Tail length: long
-#Size: medium-large
+#Size: large
 #age: 1
 
 #Behavior:
