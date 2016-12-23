@@ -2,6 +2,12 @@
 
 class Puppy
 
+	def initialize
+		puts "Initializing new puppy instance ..."
+	end
+	#The initialize method will run at the beginnning of the program, without altering driver code.
+	#Misspelling initialize will result in it not printing, ruby won't recognize it's special status.
+
 	def fetch(toy)
 	    puts "I brought back the #{toy}!"
 	    toy
@@ -32,12 +38,6 @@ class Puppy
 		end
 	end
 
-	def initialize
-		puts "Initializing new puppy instance ..."
-	end
-	#The initialize method will run at the beginnning of the program, without altering driver code.
-	#Misspelling initialize will result in it not printing, ruby won't recognize it's special status.
-
 end
 
 #Initialize an instance of puppy
@@ -51,21 +51,38 @@ golden_pup.tail_wag(5)
 
 #Release 2:
 
-class Tickets
+class Exercise
 
 	def initialize
-		puts "Assigning tickets to the event..."
+		puts "Initializing a workout..."
 	end
 
-	def paper_tickets
+
+	def weight_lifting(rep_num)
+		puts "Lift #{rep_num} reps."
 	end
 
-	def electronic_tickets
+
+	def cardio(dist_num)
+		puts "Run #{dist_num} miles."
 	end
 
 end
 
+arr = []
 
+#loop to create 50 instances of Exercise
+50.times do 
+  workout_1 = Exercise.new
+#add each instance to a datat structure (array)
+  arr << workout_1
+end
+
+#run the instance methods on each instance of exercise.
+arr.each do |instance|
+  instance.weight_lifting(10)
+  instance.cardio(10)
+end
 
 
 
