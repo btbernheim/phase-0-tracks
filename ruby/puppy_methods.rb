@@ -49,6 +49,22 @@ golden_pup.roll_over
 golden_pup.dog_years(5)
 golden_pup.tail_wag(5)
 
+#Release 2:
+
+class Tickets
+
+	def initialize
+		puts "Assigning tickets to the event..."
+	end
+
+	def paper_tickets
+	end
+
+	def electronic_tickets
+	end
+
+end
+
 
 
 
