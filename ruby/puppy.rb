@@ -1,7 +1,7 @@
-#Puupy Breed: 
+#Puppy Breed: 
 #Golden Retriever
 
-#Characteristics
+#Characteristics:
 #Fur color: feathered gold
 #Fur length: long
 #Leg count: 4
