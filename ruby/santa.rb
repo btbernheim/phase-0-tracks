@@ -42,7 +42,8 @@ class Santa
 
 
 	def get_mad_at(reindeer_name)
-		#?
+		@reindeer_ranking.delete(reindeer_name)
+		@reindeer_ranking.insert(8, reindeer_name)
 	end
 
 end
@@ -52,4 +53,7 @@ santa1.celebrate_birthday
 puts "This santa is a #{santa1.age} year old #{santa1.ethnicity} #{santa1.gender}"
 santa1.speak
 santa1.eat_milk_and_cookies("choclate chip cookie")
+santa1.get_mad_at("Rudolph")
+santa1.gender = "female"
+puts "This santa is a #{santa1.age} year old #{santa1.ethnicity} #{santa1.gender}"
 
