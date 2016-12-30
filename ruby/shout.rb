@@ -14,7 +14,6 @@
 #Shout.yelling_happily("I don't understand self, but I want to")
 
 module Shout
-
   def yell_angrily(words)
     words + "!!!" + " :("
   end
@@ -22,5 +21,13 @@ module Shout
   def yelling_happily(happy_words)
   	happy_words + "!!!" + " :)"
   end
-  
 end
+
+class Programmer
+	include Shout
+end
+
+class Construction_worker
+	include shout
+end
+
