@@ -27,7 +27,14 @@ class Programmer
 	include Shout
 end
 
-class Construction_worker
-	include shout
+class Laborer
+	include Shout
 end
 
+brian = Programmer.new
+brian.yell_angrily("I don't understand self")
+brian.yelling_happily("I don't understand self, but I want to")
+
+worker = Laborer.new
+worker.yell_angrily("I crushed my thumb")
+worker.yelling_happily("I fixed it")
