@@ -1,14 +1,26 @@
-#Define the module
+#module Shout
+
+#  def self.yell_angrily(words)
+#    words + "!!!" + " :("
+#  end
+
+#  def self.yelling_happily(happy_words)
+#  	happy_words + "!!!" + " :)"
+#  end
+  
+#end
+
+#Shout.yell_angrily("I don't understand self")
+#Shout.yelling_happily("I don't understand self, but I want to")
+
 module Shout
 
-  def self.yell_angrily(words)
+  def yell_angrily(words)
     words + "!!!" + " :("
   end
 
-  def yelling_happily
-  	puts "I'm yelling, but I'm happy."
+  def yelling_happily(happy_words)
+  	happy_words + "!!!" + " :)"
   end
+  
 end
-
-Shout.yell_angrily("I don't understand self")
-Shout.yelling_happily("I don't understand self, but I want to")
