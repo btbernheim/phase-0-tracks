@@ -12,7 +12,7 @@ class GuessingGame
 		@word.split("").each_with_index do |w_letter, index|
 			if g_letter == w_letter
 				@display_word[index] = g_letter
-				puts "Here is your progress towards guessing the word:"
+				puts "Player 2, here is your progress towards guessing the word:"
         p @display_word
 			end
 		  if !@word.include? (g_letter)
