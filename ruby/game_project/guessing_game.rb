@@ -16,18 +16,15 @@ class GuessingGame
         p @display_word
 			end
 		  if !@word.include? (g_letter)
-		    puts "Nope"
+		    puts "Nope..."
 		  end
 		end
 	end
 	
 	# Determine winning conditions
-	def game_won?
-	  if	@word == @display_word
-			puts "Congratulations Player 2, you won!"
-			true
-		else
-			false
+	def game_won
+	  if @word == @display_word
+		puts "Congratulations Player 2, you won!"
 	  end
 	end
 end
@@ -52,7 +49,7 @@ until attempts == game_word.length + 2
 	end
 	guessed_letters << letter_guess
   game.guess_the_letter(letter_guess)
-  game.game_won?
+  game.game_won
   
   attempts += 1 
 end
