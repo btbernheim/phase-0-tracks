@@ -6,7 +6,7 @@ class GuessingGame
 	end
   
   	# Take a guess in the form of a letter and check to see if it is in the
-  	# target word, update the word pattern to include the missing letter
+  	# target word, update the word pattern to include the missing letter.
 	def guess_the_letter(g_letter)
 		g_letter.downcase
 		@word.split("").each_with_index do |w_letter, index|
@@ -48,10 +48,9 @@ until attempts == game_word.length + 2
 		letter_guess = gets.chomp
 	end
 	guessed_letters << letter_guess
-  game.guess_the_letter(letter_guess)
-  game.game_won
-  
-  attempts += 1 
+	game.guess_the_letter(letter_guess)
+	game.game_won
+  	attempts += 1 
 end
 
 
