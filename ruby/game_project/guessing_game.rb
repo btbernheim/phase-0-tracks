@@ -7,7 +7,7 @@ class GuessingGame
 	end
   
 	# Take a guess in the form of a letter and check to see if it is in the
-	# target word, update the word pattern to include the missing letter
+	# target word, update the word pattern to include the missing letter.
 	def guess_the_letter(g_letter)
 	 	@attempts += 1
 		g_letter.downcase
@@ -24,7 +24,7 @@ class GuessingGame
 		end
 	end
 	
-	# Determine winning conditions
+	# Determine winning conditions.
 	def game_won?
 		if @word == @display_word
 	  		puts "Congratulations Player 2, you won!"
@@ -34,7 +34,7 @@ class GuessingGame
 		end
 	end
 	
-	# Determine losing conditions
+	# Determine losing conditions.
 	def game_lost?
 		if @attempts == @word.length + 2
 		    puts "Player 1 won, player 2, why are you so bad guessing?"
@@ -44,7 +44,7 @@ class GuessingGame
 		end
 	end
 	
-	# Set the conditions for the interface's loop to stop
+	# Set the conditions for the interface's loop to stop.
 	def game_is_over
 	  game_lost? || game_won?
 	end
@@ -59,7 +59,7 @@ game = GuessingGame.new(game_word)
 
 guessed_letters = []
 
-#Create an interface for the users to play the game
+#Create an interface for the users to play the game.
 until game.game_is_over
   	puts "Player 2, please guess a letter..."
 	letter_guess = gets.chomp
