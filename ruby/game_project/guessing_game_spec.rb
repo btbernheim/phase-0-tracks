@@ -12,4 +12,12 @@ describe GuessingGame do
 	it "checks if player 2 won the game" do
 		expect(@word == @display_word).to eq true
 	end
+
+	it "checks if player 1 won the game" do
+		expect(@attempts == @wprd.length + 2).to eq true
+	end
+
+	it "checks whether the game is over by having a condition met" do
+		expect(game_lost? || game_won?).to eq true
+	end
 end
