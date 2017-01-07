@@ -11,15 +11,13 @@ class GuessingGame
 	def guess_the_letter(g_letter)
 	 	@attempts += 1
 		g_letter.downcase
+		if !@word.include? (g_letter)
+			    puts "Nope..."
 		@word.split("").each_with_index do |w_letter, index|
 			if g_letter == w_letter
 				@display_word[index] = g_letter
 				puts "Player 2, here is your progress towards guessing the word:"
         		p @display_word
-			end
-			if !@word.include? (g_letter)
-			    puts "Nope..."
-			    break
 			end
 		end
 	end
@@ -29,9 +27,6 @@ class GuessingGame
 		if @word == @display_word
 	  		puts "Congratulations Player 2, you won!"
 	  		true 
-		else 
-		  false
-		end
 	end
 	
 	# Determine losing conditions.
@@ -39,9 +34,6 @@ class GuessingGame
 		if @attempts == @word.length + 2
 		    puts "Player 1 won, player 2, why are you so bad guessing?"
 		    true
-		else
-	    	false
-		end
 	end
 	
 	# Set the conditions for the interface's loop to stop.
