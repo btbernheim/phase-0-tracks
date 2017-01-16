@@ -1,0 +1,10 @@
+
+1) SELECT * FROM guests;
+
+2) UPDATE guests SET table_number=2 WHERE guest="John Doe";
+
+3) SELECT * FROM guests, entrees WHERE guests.entree_id = entrees.id;
+
+4)
+
+5) DELETE FROM guests WHERE guest="Jim Doe";
