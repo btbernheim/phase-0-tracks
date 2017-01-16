@@ -20,10 +20,16 @@
 3|Jim Doe|2|3|3|Fish
 4|Jack Doe|7|1|1|Chicken
 
-4)
+4) sqlite> SELECT guest, table_number FROM guests;
+
+John Doe|2
+Jane Doe|3
+Jack Doe|7
 
 5) DELETE FROM guests WHERE guest="Jim Doe";
 
 1|John Doe|2|1
 2|Jane Doe|3|2
 4|Jack Doe|7|1
+
+SELECT * FROM guests CROSS JOIN entrees;
