@@ -20,7 +20,7 @@ puts "This app will hold all of your user and password information so you never 
 more_tries = ""
 answer = false 
 until more_tries == "no"
-	puts "Would you like to locate or store a user name and password? (locate/store)"
+	puts "Would you like to locate, store, update, or delete login information? (locate/store)"
 	response = gets.chomp
 	until answer == true
 		if response = "store"
@@ -37,8 +37,21 @@ until more_tries == "no"
 				locate_webiste_answer = gets.chomp
 				user_info_db.execute("SELECT * FROM info WHERE website=#{locate_webiste_answer}")
 				answer == true
+			elsif response = "update"
+				puts "Which websites login information would you like to update?"
+				update_login = gets.chomp
+				puts "Enter you new user name."
+				new_user_name = gets.chomp
+				puts "Enter your new password."
+				new_password = gets.chomp
+				user_info_db.execute("UPDATE info SET user_name=#{new_user_name}, password=#{new_password} WHERE website=#{update_login}")
+				answer == true
+			elsif response = "delete"
+				puts "What is the wensite to login information you'd like to delete?"
+				delete_login = gets.chomp
+				answer == true
 			else puts "Please enter 'locate' or 'store'."
-				aanswer == false
+				answer == false
 		end
 	end
 	puts "Would like to look up or store more information?"
