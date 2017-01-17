@@ -22,7 +22,6 @@ answer = false
 # until more_tries == "no"
 	puts "Would you like to locate, store, update, or delete login information? (locate/store/update/delete)"
 	response = gets.chomp
-	# until answer == true
 		if response == "store"
 			puts "What website do you wish to store information about?"
 			website_answer = gets.chomp
@@ -31,11 +30,12 @@ answer = false
 			puts "Enter your password:"
 			password_answer = gets.chomp
 			user_info_db.execute("INSERT INTO info (website, user_name, password) VALUES (?, ?, ?)", [website_answer, user_name_answer, password_answer])
+			p user_info_db.execute("SELECT * FROM info")
 			answer == true
 			elsif response == "locate"
 				puts "What website do you need your user name and password for?"
 				locate_webiste_answer = gets.chomp
-				user_info_db.execute("SELECT * FROM info WHERE website='#{locate_webiste_answer}'")
+				p user_info_db.execute("SELECT * FROM info WHERE website='#{locate_webiste_answer}'")
 				answer == true
 			elsif response == "update"
 				puts "Which websites login information would you like to update?"
@@ -44,16 +44,18 @@ answer = false
 				new_user_name = gets.chomp
 				puts "Enter your new password."
 				new_password = gets.chomp
-				user_info_db.execute("UPDATE info SET user_name='#{new_user_name}', password='#{new_password}'' WHERE website='#{update_login}'")
+				user_info_db.execute("UPDATE info SET user_name='#{new_user_name}', password='#{new_password}' WHERE website='#{update_login}'")
+				p user_info_db.execute("SELECT * FROM info WHERE website='#{update_login}'")
 				answer == true
 			elsif response == "delete"
-				puts "What is the wensite to login information you'd like to delete?"
+				puts "What website login information would you like to delete?"
 				delete_login = gets.chomp
+				user_info_db.execute("DELETE FROM info WHERE website='#{delete_login}'")
+				p user_info_db.execute("SELECT * FROM info")
 				answer == true
-			else puts "Please enter 'locate' or 'store'."
+			else puts "Please enter 'locate', 'store', 'update', or 'delete'."
 				answer == false
 		end
-	# end
 # 	puts "Would like to look up or store more information?"
 # 	more_tries = gets.chomp
 # end
