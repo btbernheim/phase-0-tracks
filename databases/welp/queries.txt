@@ -7,3 +7,8 @@
 
 Grundy Hallow Wedding Chapel|Mandy|Kaling|5|Highly recommended!
 Lotus Yoga|Holly|Berry|4|Great Service.
+
+SELECT * FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE business_id =1;
+
+1|5|Highly recommended!|1|2|1|Grundy Hallow Wedding Chapel|2|Mandy|Kaling
+
