@@ -8,6 +8,42 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
+get '/contact' do
+  "https://www.google.com/"
+end
+
+get '/great_job' do
+  #if the route contains a name parameter, then print good job with the name.
+  if params[:name]
+    "Good job, #{params[:name]}"
+  else "Good job"
+  end
+end
+
+get '/:value1/add/:value2' do
+  value1 = params[:value1].to_i
+  value2 = params[:value2].to_i
+  "#{value1 + value2}"
+end
+
+get '/students' do
+  if params[:age]
+    students = db.execute("SELECT * FROM students WHERE age <= #{params[:age]}")
+  else 
+    students = db.execute("SELECT * FROM students")
+  end
+  response = ""
+  students.each do |student|
+    response << "ID: #{student['id']}<br>"
+    response << "Name: #{student['name']}<br>"
+    response << "Age: #{student['age']}<br>"
+    response << "Campus: #{student['campus']}<br><br>"
+  end
+  response
+end
+
+
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
@@ -45,6 +81,30 @@ get '/students/:id' do
   student.to_s
 end
 
-get '/contact' do
-  "https://www.google.com/"
-end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
