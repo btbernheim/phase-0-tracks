@@ -1,9 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>India</title>
 </head>
 <body>
+	<h1>President of India</h1>
+	<p id = "question">Can you guess the president of India?</p>
+	<p id = "click"> Click here to know the answer </p>
+	<p id = "answer"> Pranab Mukherjee </p>
+	<script src="jquery-3.1.1.min.js"></script> 
+	<script>
+		$(function() { // Is this necessary? The intro video said it was, but the code works without it...
 
+			// This will hide something from the user
+			$("#answer").fadeOut(200);
+
+			// Activates the click function to make the naswer appear
+			$("#click").click(function(){
+   				$("#answer").fadeIn(200);
+			});
+
+			// Jquery actions differ from events in their syntax i.e. lines 16 and 19
+
+			// Make the answer disappear
+			$("#answer").click(function(){
+   				$("#answer").fadeOut(200);
+			});
+
+			// w3schools shows above syntax, whereas youtube video shows this, why the difference?
+			// $("#click").on("click", function() {
+			//	 $("#answer").fadein(200);
+			// })
+
+			// This will provide a popup alerting the user of something
+			$("#question").click(function() {
+	  			alert("Click on the sentence below for the naswer.");
+	  		});
+
+	  		// You can inject/change css into your html using jquery
+	  		$("#answer").css({
+	  			color:'red', 
+	  			fontWeight:'bold'
+	  		}); 	  		// It uses the same syntax structure as css.
+
+	  		// The fadeToggle method accomplishes what the above two click funstions achieve
+	  		// $("#click").click(function(){
+   			//	$("#answer").fadeToggle(200);
+			// });
+
+			$(".h1").on("mouseover", (function(){
+				$(".h1").fadeToggle(200);
+			});
+
+	  	});
+		// For each new manipulation you want to make, include the $ sign before the code.
+</script> 
 </body>
 </html>
