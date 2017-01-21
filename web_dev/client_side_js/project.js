@@ -5,7 +5,7 @@ var p_font_color = document.getElementById("question");
 p_font_color.style.color = "red";
 
 
-
+// Event listener
 function p_on_click(event){
 	console.log("event done")
 	console.log(event);
