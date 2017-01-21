@@ -34,7 +34,7 @@ until more_tries == "no"
 			elsif response == "locate"
 				puts "What website do you need your user name and password for?"
 				locate_webiste_answer = gets.chomp
-				p user_info_db.execute("SELECT * FROM info WHERE website='#{locate_webiste_answer}'")
+				p user_info_db.execute("SELECT * FROM info WHERE website=?", [locate_webiste_answer])
 			elsif response == "update"
 				puts "Which websites login information would you like to update?"
 				update_login = gets.chomp
