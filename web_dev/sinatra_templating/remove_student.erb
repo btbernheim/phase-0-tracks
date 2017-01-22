@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+	<h1>Remove A Student</h1>
+	<p>Here is a list of our students by name:</p>
+	<ul>
+		<% stendents.each do |name| %>
+			<li><%= student['name'] %></li>
+		<% end %>
+	</ul>
+	<p>Which student would you like to remove?</p>
+	<form action="/" method="POST">
+		<input type="text" name="name" placeholder="Name"?>
+		<button type="submit">Delete Student</button>
+	</form>
+</body>
+</html>
